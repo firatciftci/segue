@@ -1,0 +1,13 @@
+{
+  "caption": "Drag Segue to Applications to install",
+  "accent": "#00A0B3",
+  "glow": "#66E4ED",
+  "arrow": "wave",
+  "motif": "waves",
+  "width": 660,
+  "height": 400,
+  "iconSize": 128,
+  "app": [180, 160],
+  "applications": [480, 160],
+  "captionY": 296
+}

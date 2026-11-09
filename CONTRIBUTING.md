@@ -46,3 +46,10 @@ The script formats the code in place, so commit any changes it makes.
 ## Releases
 
 Maintainers cut a release by raising `MARKETING_VERSION` in `project.yml`, merging that change, and pushing a matching `v` tag, like `v1.2.0`. The release workflow builds, signs, and notarizes the app, publishes the DMG, and updates the Sparkle feed that installed copies check for updates.
+
+The disk image is built by `tools/dmg/make-dmg.sh`, which lays out the installer window with a background, the app, and a shortcut to Applications. To change the design, edit the colors, caption, or layout in `tools/dmg/dmg.json`, then render a new background and commit it:
+
+```sh
+xcrun swift tools/dmg/background.swift tools/dmg
+tools/dmg/make-dmg.sh path/to/Segue.app build/Segue.dmg
+```

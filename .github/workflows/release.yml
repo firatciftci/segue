@@ -116,10 +116,7 @@ jobs:
           NOTARY_KEY_ID: ${{ secrets.NOTARY_KEY_ID }}
           NOTARY_ISSUER_ID: ${{ secrets.NOTARY_ISSUER_ID }}
         run: |
-          mkdir -p "$DIST" "$RUNNER_TEMP/stage"
-          ditto "$APP" "$RUNNER_TEMP/stage/Segue.app"
-          ln -s /Applications "$RUNNER_TEMP/stage/Applications"
-          diskutil image create from --format ULFO --volumeName Segue "$RUNNER_TEMP/stage" "$DIST/Segue.dmg"
+          tools/dmg/make-dmg.sh "$APP" "$DIST/Segue.dmg"
           codesign --timestamp --keychain "$KEYCHAIN" --sign "$IDENTITY" "$DIST/Segue.dmg"
           xcrun notarytool submit "$DIST/Segue.dmg" --key "$RUNNER_TEMP/notary.p8" --key-id "$NOTARY_KEY_ID" --issuer "$NOTARY_ISSUER_ID" --wait --timeout 30m
           xcrun stapler staple "$DIST/Segue.dmg"
