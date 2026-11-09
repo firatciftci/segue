@@ -1,0 +1,58 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "NSAppleEventsUsageDescription": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segue liest die Adresse des vordersten Browser-Tabs, um deine Website-Regeln anzuwenden."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segue reads the address of the frontmost browser tab to apply your website rules."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segue lee la dirección de la pestaña del navegador en primer plano para aplicar tus reglas de sitios web."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segue lit l’adresse de l’onglet actif du navigateur pour appliquer vos règles de sites web."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segueは、Webサイトのルールを適用するために最前面のブラウザタブのアドレスを読み取ります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segue는 웹 사이트 규칙을 적용하기 위해 맨 앞에 있는 브라우저 탭의 주소를 읽습니다."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segue, web sitesi kurallarınızı uygulamak için en öndeki tarayıcı sekmesinin adresini okur."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segue 会读取最前面浏览器标签页的地址，以应用你的网站规则。"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

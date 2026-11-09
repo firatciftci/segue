@@ -1,0 +1,12 @@
+.DS_Store
+xcuserdata/
+*.xcuserstate
+.swiftpm/
+
+/build/
+/DerivedData/
+/Segue.xcodeproj/
+/Segue/Info.plist
+/Segue/Segue.entitlements
+/screenshots/
+/tools/icon/

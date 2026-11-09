@@ -1,0 +1,44 @@
+name: Bug report
+description: Something in Segue doesn't work as it should.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Describe what you saw and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open Segue's settings
+        2. Add a website rule for example.com
+        3. …
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Segue version
+      description: Find it in Settings > General, under Updates.
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Input sources
+      description: Optional. List the input sources you have enabled, or paste the output of segue list.
+  - type: textarea
+    id: screens
+    attributes:
+      label: Screenshots or recordings
+      description: Optional.

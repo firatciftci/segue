@@ -1,0 +1,84 @@
+{
+  "fill": {
+    "automatic-gradient": "srgb:0.00000,0.62745,0.70196,1.00000"
+  },
+  "fill-specializations": [
+    {
+      "value": {
+        "automatic-gradient": "srgb:0.00000,0.62745,0.70196,1.00000"
+      }
+    },
+    {
+      "appearance": "dark",
+      "value": {
+        "automatic-gradient": "srgb:0.01961,0.25490,0.30588,1.00000"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "name": "front",
+      "layers": [
+        {
+          "name": "wave",
+          "image-name": "wave.svg",
+          "glass": false,
+          "fill-specializations": [
+            {
+              "appearance": "dark",
+              "value": {
+                "solid": "srgb:0.40000,0.89412,0.92941,1.00000"
+              }
+            }
+          ]
+        },
+        {
+          "name": "front",
+          "image-name": "front.svg",
+          "glass": true,
+          "opacity": 0.96,
+          "fill-specializations": [
+            {
+              "appearance": "dark",
+              "value": {
+                "solid": "srgb:0.10980,0.17255,0.19608,1.00000"
+              }
+            }
+          ]
+        }
+      ],
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.45
+      },
+      "translucency": {
+        "enabled": true,
+        "value": 0.35
+      },
+      "specular": true
+    },
+    {
+      "name": "back",
+      "layers": [
+        {
+          "name": "back",
+          "image-name": "back.svg",
+          "glass": true,
+          "opacity": 0.5
+        }
+      ],
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.3
+      },
+      "translucency": {
+        "enabled": true,
+        "value": 0.6
+      },
+      "specular": true
+    }
+  ],
+  "supported-platforms": {
+    "squares": "shared"
+  }
+}
