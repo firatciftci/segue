@@ -40,7 +40,8 @@ enum L {
 
     static let automaticUpdates = String(localized: "Check for Updates Automatically")
     static let checkForUpdates = String(localized: "Check Now")
-    static func updatesVersion(_ version: String) -> String { String(localized: "Segue \(version)") }
+    static let updatesTitle = String(localized: "Updates")
+    static func updatesVersion(_ version: String) -> String { String(localized: "Version \(version)") }
 
     static let cliTitle = String(localized: "Command-Line Tool")
     static let cliDetail = String(localized: "Switch input sources from Terminal and scripts with the segue command.")

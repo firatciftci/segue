@@ -70,10 +70,13 @@ struct GeneralPane: View {
             if updater.isAvailable {
                 Section {
                     @Bindable var updater = updater
-                    Toggle(L.automaticUpdates, isOn: $updater.automaticallyChecks)
-                    LabeledContent(L.updatesVersion(Self.version)) {
+                    LabeledContent {
                         Button(L.checkForUpdates) { updater.checkForUpdates(nil) }
+                    } label: {
+                        Text(L.updatesTitle)
+                        Text(L.updatesVersion(Self.version))
                     }
+                    Toggle(L.automaticUpdates, isOn: $updater.automaticallyChecks)
                 }
             }
             Section {
