@@ -11,7 +11,9 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         item.autosaveName = "Segue"
         item.behavior = .removalAllowed
         menu.delegate = self
-        item.menu = menu
+        item.button?.target = self
+        item.button?.action = #selector(showMenu(_:))
+        item.button?.sendAction(on: [.leftMouseDown, .rightMouseDown])
         visibilityObservation = item.observe(\.isVisible) { item, _ in
             let visible = item.isVisible
             MainActor.assumeIsolated {
@@ -77,6 +79,15 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         for entry in menu.items {
             entry.preferredImageVisibility = .visible
         }
+    }
+
+    @objc private func showMenu(_ button: NSStatusBarButton) {
+        guard let window = button.window, let screen = window.screen else { return }
+        let frame = window.convertToScreen(button.convert(button.bounds, to: nil))
+        let barBottom = screen.visibleFrame.maxY < screen.frame.maxY ? screen.visibleFrame.maxY : 2 * frame.midY - screen.frame.maxY
+        button.highlight(true)
+        menu.popUp(positioning: nil, at: NSPoint(x: frame.minX - 5, y: barBottom - 6), in: nil)
+        button.highlight(false)
     }
 
     func menuWillOpen(_: NSMenu) {
