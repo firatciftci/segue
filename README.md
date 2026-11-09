@@ -12,7 +12,7 @@
 <p align="center">
   <a href="https://github.com/firatciftci/segue/releases/latest"><b>Download for macOS</b></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/firatciftci/segue/actions/workflows/ci.yml"><img src="https://github.com/firatciftci/segue/actions/workflows/ci.yml/badge.svg" alt="CI status" align="center"></a>
+  <a href="https://github.com/firatciftci/segue/actions/workflows/ci.yml"><img src="https://github.com/firatciftci/segue/actions/workflows/ci.yml/badge.svg" alt="CI status" align="texttop"></a>
 </p>
 
 <p align="center">
