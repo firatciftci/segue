@@ -14,6 +14,7 @@ enum L {
     static let tabGroups = String(localized: "Groups")
     static let tabShortcuts = String(localized: "Shortcuts")
     static let tabApps = String(localized: "Apps")
+    static let tabAbout = String(localized: "About")
 
     static let launchAtLogin = String(localized: "Open at Login")
     static let launchAtLoginApproval = String(localized: "Allow Segue in System Settings > General > Login Items & Extensions.")
@@ -41,7 +42,21 @@ enum L {
     static let automaticUpdates = String(localized: "Check for Updates Automatically")
     static let checkForUpdates = String(localized: "Check Now")
     static let updatesTitle = String(localized: "Updates")
-    static func updatesVersion(_ version: String) -> String { String(localized: "Version \(version)") }
+    static func lastChecked(_ time: String) -> String { String(localized: "Last checked \(time)") }
+    static let neverChecked = String(localized: "Not checked yet")
+
+    static let aboutTagline = String(localized: "Switch input sources without breaking your flow.")
+    static func aboutVersion(_ version: String, _ build: String) -> String { String(localized: "Version \(version) (\(build))") }
+    static let developer = String(localized: "Developer")
+    static let sourceCode = String(localized: "Source Code")
+    static let github = String(localized: "GitHub")
+    static let releaseNotes = String(localized: "Release Notes")
+    static let reportProblem = String(localized: "Report a Problem")
+    static let license = String(localized: "License")
+    static let licenseName = String(localized: "MIT")
+    static let acknowledgments = String(localized: "Acknowledgments")
+    static let kawaCredit = String(localized: "Segue is inspired by Kawa.")
+    static let openSourceFooter = String(localized: "Segue is free and open source software.")
 
     static let cliTitle = String(localized: "Command-Line Tool")
     static let cliDetail = String(localized: "Switch input sources from Terminal and scripts with the segue command.")

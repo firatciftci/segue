@@ -5,7 +5,6 @@ struct GeneralPane: View {
     @Environment(Preferences.self) private var prefs
     @Environment(Switcher.self) private var switcher
     @Environment(CommandLineTool.self) private var commandLine
-    @Environment(Updater.self) private var updater
     @State private var commandLineError: String?
     @State private var confirmingUninstall = false
     @State private var loginStatus = SMAppService.mainApp.status
@@ -65,18 +64,6 @@ struct GeneralPane: View {
                     Spacer()
                     Button(L.indicatorPreview, action: preview)
                         .disabled(switcher.current == nil)
-                }
-            }
-            if updater.isAvailable {
-                Section {
-                    @Bindable var updater = updater
-                    LabeledContent {
-                        Button(L.checkForUpdates) { updater.checkForUpdates(nil) }
-                    } label: {
-                        Text(L.updatesTitle)
-                        Text(L.updatesVersion(Self.version))
-                    }
-                    Toggle(L.automaticUpdates, isOn: $updater.automaticallyChecks)
                 }
             }
             Section {
@@ -179,10 +166,6 @@ struct GeneralPane: View {
             }
             loginStatus = SMAppService.mainApp.status
         }
-    }
-
-    private static var version: String {
-        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
     }
 
     private func installCommandLine() {

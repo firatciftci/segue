@@ -7,6 +7,7 @@ enum SettingsTab: Int, CaseIterable {
     case groups
     case shortcuts
     case apps
+    case about
 
     init?(name: String) {
         guard let tab = Self.allCases.first(where: { "\($0)".caseInsensitiveCompare(name) == .orderedSame }) else { return nil }
@@ -66,6 +67,7 @@ final class SettingsWindowController: NSWindowController, NSWindowDelegate {
         add(L.tabGroups, symbol: "square.stack", GroupsPane())
         add(L.tabShortcuts, symbol: "command", ShortcutsPane())
         add(L.tabApps, symbol: "square.grid.2x2", AppsPane())
+        add(L.tabAbout, symbol: "info.circle", AboutPane())
         let window = DemoData.isEnabled ? DemoWindow(contentViewController: tabs) : NSWindow(contentViewController: tabs)
         window.styleMask = [.titled, .closable, .miniaturizable]
         window.toolbarStyle = .preference

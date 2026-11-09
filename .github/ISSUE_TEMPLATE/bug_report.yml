@@ -23,7 +23,7 @@ body:
     id: version
     attributes:
       label: Segue version
-      description: Find it in Settings > General, under Updates.
+      description: Find it in Settings > About.
     validations:
       required: true
   - type: input
